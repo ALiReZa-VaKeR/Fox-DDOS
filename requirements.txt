@@ -1,0 +1,7 @@
+ 
+socket
+os
+colorama
+threading
+time
+sys
