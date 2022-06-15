@@ -1,4 +1,4 @@
- 
+
 import socket
 import os
 from colorama import Fore, init
@@ -35,11 +35,12 @@ Target = input(Fore.GREEN+"Enter the target IP => "+Reset)
 
 Port = input(Fore.GREEN+"Enter the target port (Default: 80) => "+Reset)
 
-Request_Number = int(input(Fore.GREEN+"Enter your request number => "+Reset))
-
-# Check port Number
-if(not Port):
+if (Port == "" or not Port):
     Port = DefaultPort
+else:
+    Port = int(Port)
+
+Request_Number = int(input(Fore.GREEN+"Enter your request number => "+Reset))
 
 
 def Attack():
